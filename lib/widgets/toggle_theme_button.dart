@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
 
-class ToggleThemeButton extends StatefulWidget {
+class ToggleThemeButton extends StatelessWidget {
   const ToggleThemeButton({super.key, required this.setThemeMode});
   final void Function(ThemeMode themeMode) setThemeMode;
 
-  @override
-  State<ToggleThemeButton> createState() => _ToggleThemeButtonState();
-}
-
-class _ToggleThemeButtonState extends State<ToggleThemeButton> {
-  void toggleThemeMode() {
+  void _toggleThemeMode(BuildContext context) {
     if (Theme.of(context).brightness == Brightness.light) {
-      widget.setThemeMode(ThemeMode.dark);
+      setThemeMode(ThemeMode.dark);
     } else {
-      widget.setThemeMode(ThemeMode.light);
+      setThemeMode(ThemeMode.light);
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final brightness = Theme.of(context).brightness;
+
     return IconButton(
-      onPressed: toggleThemeMode,
-      tooltip: Theme.of(context).brightness == Brightness.dark
+      onPressed: () => _toggleThemeMode(context),
+      tooltip: brightness == Brightness.dark
           ? "Change to Light Mode"
           : "Change to Dark Mode",
       icon: Icon(
-        Theme.of(context).brightness == Brightness.dark
+        brightness == Brightness.dark
             ? Icons.dark_mode //light_mode
             : Icons.light_mode,
       ),

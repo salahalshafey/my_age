@@ -85,14 +85,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final height = (MediaQuery.of(context).size.height -
-            AppBar().preferredSize.height -
-            MediaQuery.of(context).padding.top -
-            MediaQuery.of(context).padding.bottom) *
-        1;
+    var horizantalPadding = 20.0;
     var width = MediaQuery.of(context).size.width;
     if (width > 800) {
-      width = 800;
+      horizantalPadding += (width - 800) / 2;
     }
 
     return Scaffold(
@@ -107,31 +103,21 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         centerTitle: true,
       ),
-      body: Center(
-        child: Container(
-          height: height - 10,
-          width: width,
-          alignment: Alignment.topCenter,
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                const SizedBox(height: 30),
-                DatePiker(_addBirthDate),
-                const SizedBox(height: 50),
-                DateViewList('TOTAL AGE', _person.totalAge),
-                const SizedBox(height: 50),
-                DayWhenYouBorn(_person.dayOfBorn, _person.hijriDate),
-                const SizedBox(height: 50),
-                DateViewList(
-                    'NEXT BIRTHDAY', _person.remainingTimeToNextBirthDay),
-                const SizedBox(height: 10),
-                NextBirthDayLive(_addBirthDate, theDate),
-              ],
-            ),
-          ),
-        ),
+      body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: horizantalPadding),
+        children: <Widget>[
+          const SizedBox(height: 20),
+          DatePiker(_addBirthDate),
+          const SizedBox(height: 50),
+          DateViewList('TOTAL AGE', _person.totalAge),
+          const SizedBox(height: 50),
+          DayWhenYouBorn(_person.dayOfBorn, _person.hijriDate),
+          const SizedBox(height: 50),
+          DateViewList('NEXT BIRTHDAY', _person.remainingTimeToNextBirthDay),
+          const SizedBox(height: 10),
+          Align(child: NextBirthDayLive(_addBirthDate, theDate)),
+          const SizedBox(height: 20),
+        ],
       ),
     );
   }
