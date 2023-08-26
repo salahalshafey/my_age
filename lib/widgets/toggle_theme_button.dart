@@ -23,8 +23,8 @@ class ToggleThemeButton extends StatelessWidget {
           : "Change to Dark Mode",
       icon: Icon(
         brightness == Brightness.dark
-            ? Icons.dark_mode //light_mode
-            : Icons.light_mode,
+            ? Icons.light_mode //light_mode
+            : Icons.dark_mode,
       ),
     );
   }
