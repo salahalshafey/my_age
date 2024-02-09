@@ -12,6 +12,9 @@
 ## Download the app from the Play Store
 <a href="https://play.google.com/store/apps/details?id=com.salahalshafey.myage"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="300"></img></a>
 
+## Download the app For Windows
+<a href="https://github.com/salahalshafey/apps_for_download/raw/main/windows%20apps/my_age.exe"><img src="https://get.todoist.help/hc/article_attachments/4403191721234/WindowsButton.svg" width="300"></img></a>
+
 
 ## App pages
 <img src="https://github.com/salahalshafey/my_age/assets/64344500/34d90cef-2f5d-4340-a2d8-47a244267916" alt="Image 1" width="256px"/>  <img src="https://github.com/salahalshafey/my_age/assets/64344500/082271ac-31df-405a-aa85-270177963104" alt="Image 1" width="256px"/>  <img src="https://github.com/salahalshafey/my_age/assets/64344500/21be00ef-1da4-4c39-8ee4-9853bc1a4c79" alt="Image 1" width="256px"/>
