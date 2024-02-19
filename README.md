@@ -4,8 +4,8 @@
 
 ## A Flutter project is mainly used for 
 * Calculating the Age in `years, months, and days`.
-* Getting the `Day of the week` of the born day.
-* Getting the `Hijri Date` of the born day.
+* Getting the `Day of the week` of the birthday.
+* Getting the `Hijri Date` of the birthday.
 * Getting the `Next birthday` by `months, days, hours, minutes, and seconds`.
 
 
