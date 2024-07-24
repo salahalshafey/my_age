@@ -1,5 +1,6 @@
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
+import 'package:my_age/l10n/l10n.dart';
 
 class DatePiker extends StatefulWidget {
   const DatePiker(this.addBirthDate, {Key? key}) : super(key: key);
@@ -33,9 +34,9 @@ class _DatePikerState extends State<DatePiker> {
     return Column(
       children: [
         const SizedBox(height: 8),
-        const Text(
-          'DATE OF BIRTH',
-          style: TextStyle(
+        Text(
+          Strings.of(context).dateOfBirth,
+          style: const TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 20,
           ),
@@ -59,8 +60,12 @@ class _DatePikerState extends State<DatePiker> {
                 Expanded(
                   child: Text(
                     date == null
-                        ? 'No Date Chosen'
-                        : DateFormat('dd - MM - yyy').format(date!),
+                        ? Strings.of(context).noDateChosen
+                        : DateFormat(
+                            "d MMMM, yyy",
+                            Localizations.localeOf(context).languageCode,
+                          ).format(date!),
+                    // textAlign: TextAlign.center,
                     style: const TextStyle(fontSize: 18),
                   ),
                 ),
@@ -70,7 +75,7 @@ class _DatePikerState extends State<DatePiker> {
                     Icons.date_range_rounded,
                     color: Theme.of(context).colorScheme.primary,
                   ),
-                  tooltip: 'Pick a Date',
+                  tooltip: Strings.of(context).pickADate,
                 ),
               ],
             ),

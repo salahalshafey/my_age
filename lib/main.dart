@@ -1,59 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-import 'pages/home_screen.dart';
+import 'src/app.dart';
+import 'src/providers/general_settings_provider.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  await Hive.initFlutter("My_Age");
+  await Hive.openBox("general_settings");
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = ThemeMode.system;
-
-  void _setThemeMode(ThemeMode themeMode) {
-    setState(() {
-      _themeMode = themeMode;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My Age',
-      theme: ThemeData(
-        useMaterial3: true,
-        textTheme: ThemeData.light(useMaterial3: true).textTheme.copyWith(
-              displayLarge: const TextStyle(
-                fontSize: 18,
-              ),
-              displayMedium: const TextStyle(
-                fontFamily: 'OpenSans',
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-      ),
-      darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
-        textTheme: ThemeData.dark(useMaterial3: true).textTheme.copyWith(
-              displayLarge: const TextStyle(
-                fontSize: 18,
-              ),
-              displayMedium: const TextStyle(
-                fontFamily: 'OpenSans',
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-      ),
-      themeMode: _themeMode,
-      home: HomeScreen(setThemeMode: _setThemeMode),
-    );
-  }
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (ctx) => GeneralSettings()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }

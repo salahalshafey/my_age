@@ -1,36 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:hijri/hijri_calendar.dart';
+import 'package:my_age/l10n/l10n.dart';
 
 import '../models/person.dart';
 
-import '../widgets/date_picker.dart';
-import '../widgets/date_view_list.dart';
-import '../widgets/day_when_you_born.dart';
-import '../widgets/next_birth_day_live.dart';
-import '../widgets/toggle_theme_button.dart';
+import 'genearal_settings_screen.dart';
 import 'about_app_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key, required this.setThemeMode}) : super(key: key);
+import '../widgets/date_picker.dart';
+import '../widgets/total_age.dart';
+import '../widgets/day_when_you_born.dart';
+import '../widgets/next_birth_day.dart';
+import '../widgets/next_birth_day_live.dart';
 
-  final void Function(ThemeMode themeMode) setThemeMode;
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Person _person = const Person();
+  late Person _person = Person(context: context);
   DateTime? theDate;
 
   void _addBirthDate(DateTime? date) {
     setState(() {
       theDate = date;
-      _person = Person(date);
+      _person = Person(birthDate: date, context: context);
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    HijriCalendar.setLocal(Localizations.localeOf(context).languageCode);
+
     var horizantalPadding = 20.0;
     var width = MediaQuery.of(context).size.width;
     if (width > 800) {
@@ -39,19 +43,29 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Age Calculator'),
+        title: Text(Strings.of(context).ageCalculator),
         leading: IconButton(
+          tooltip: Strings.of(context).about,
           onPressed: () {
             goToScreenWithSlideTransition(
               context,
               const AboutAppScreen(),
-              beginOffset: const Offset(-1, 0),
+              reverseDirection: true,
             );
           },
           icon: const Icon(Icons.info),
         ),
         actions: [
-          ToggleThemeButton(setThemeMode: widget.setThemeMode),
+          IconButton(
+            tooltip: Strings.of(context).settings,
+            onPressed: () {
+              goToScreenWithSlideTransition(
+                context,
+                const GeneralSettingsScreen(),
+              );
+            },
+            icon: const Icon(Icons.settings),
+          ),
         ],
         centerTitle: true,
       ),
@@ -61,11 +75,17 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 20),
           DatePiker(_addBirthDate),
           const SizedBox(height: 50),
-          DateViewList('TOTAL AGE', _person.totalAge),
+          TotalAge(
+            Strings.of(context).totalAge,
+            _person.totalAge,
+          ),
           const SizedBox(height: 50),
           DayWhenYouBorn(_person.dayOfBorn, _person.hijriDate),
           const SizedBox(height: 50),
-          DateViewList('NEXT BIRTHDAY', _person.remainingTimeToNextBirthDay),
+          NextBirthDay(
+            Strings.of(context).nextBirthday,
+            _person.remainingTimeToNextBirthDay,
+          ),
           const SizedBox(height: 10),
           Align(child: NextBirthDayLive(_addBirthDate, theDate)),
           const SizedBox(height: 20),
@@ -78,21 +98,34 @@ class _HomeScreenState extends State<HomeScreen> {
 void goToScreenWithSlideTransition(
   BuildContext context,
   Widget screen, {
-  Offset beginOffset = const Offset(1, 0),
+  Offset? beginOffset,
+  Duration transitionDuration = const Duration(milliseconds: 300),
+  Duration reverseTransitionDuration = const Duration(milliseconds: 300),
+  bool reverseDirection = false,
 }) {
   Navigator.push(
     context,
     PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => screen,
-      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      transitionsBuilder: (ctx, animation, secondaryAnimation, child) {
+        // ScaffoldMessenger.of(ctx).removeCurrentSnackBar();
+
+        var screenTransitionDirection =
+            Directionality.of(ctx) == TextDirection.rtl ? -1.0 : 1.0;
+        if (reverseDirection) {
+          screenTransitionDirection *= -1;
+        }
+
         return SlideTransition(
           position: Tween<Offset>(
-            begin: beginOffset,
+            begin: beginOffset ?? Offset(screenTransitionDirection, 0),
             end: Offset.zero,
           ).animate(animation),
           child: child,
         );
       },
+      transitionDuration: transitionDuration,
+      reverseTransitionDuration: reverseTransitionDuration,
     ),
   );
 }

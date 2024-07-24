@@ -30,6 +30,8 @@
 .pub-cache/
 .pub/
 /build/
+save_changes_and_push_it_to_github.cmd
+my_age_windows_setup_wizard_creation
 
 # Web related
 lib/generated_plugin_registrant.dart

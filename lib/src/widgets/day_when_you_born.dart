@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_age/l10n/l10n.dart';
 
 class DayWhenYouBorn extends StatelessWidget {
   const DayWhenYouBorn(this.dayOfBorn, this.hijriDateOfBorn, {Key? key})
@@ -14,9 +15,9 @@ class DayWhenYouBorn extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(height: 10),
-        const Text(
-          'DAY WHEN YOU BORN',
-          style: TextStyle(
+        Text(
+          Strings.of(context).dayWhenYouBorn,
+          style: const TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 20,
           ),

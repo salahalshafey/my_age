@@ -1,0 +1,622 @@
+{
+  "@@locale": "en",
+
+
+
+  "@_LANGAUGES": {},
+  "english": "English",
+  "@english": {
+    "description": "the english language word"
+  },
+  "arabic": "Arabic",
+  "@arabic": {
+    "description": "the arabic language word"
+  },
+  "spanish": "Spanish",
+  "@spanish": {
+    "description": "the spanish language word"
+  },
+  "frensh": "Frensh",
+  "@frensh": {
+    "description": "the frensh language word"
+  },
+  "german": "German",
+  "@german": {
+    "description": "the german language word"
+  },
+  "turkish": "Turkish",
+  "@turkish": {
+    "description": "the turkish language word"
+  },
+
+
+
+
+  "@_CORE": {},
+  "ok": "Ok",
+  "@ok": {
+    "description": "the ok word"
+  },
+  "back": "Back",
+  "@back": {
+    "description": "the back word `for backArrow icon tooltip`"
+  },
+  "openNavigationMenu": "Open navigation menu",
+  "@openNavigationMenu": {
+    "description": "the drawer icon tooltip`"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "the Error word"
+  },
+  "pleaseChoose": "Please Choose",
+  "@pleaseChoose": {
+    "description": "the Please Choose word"
+  },
+  "camera": "Camera",
+  "@camera": {
+    "description": "the Camera word"
+  },
+  "gallery": "Gallery",
+  "@gallery": {
+    "description": "the Gallery word"
+  },
+  "share": "Share",
+  "@share": {
+    "description": "the Share word"
+  },
+  "errorHappenedWhileTryingToShareTheImage": "An error happened while trying to share the image.",
+  "@errorHappenedWhileTryingToShareTheImage": {
+    "description": "the error if Trying To Share did not complete"
+  },
+  "saveToGallery": "Save to gallery",
+  "@saveToGallery": {
+    "description": "the Save to gallery word"
+  },
+  "imageSavedToGallery": "Image saved to gallery",
+  "@imageSavedToGallery": {
+    "description": "the image saved to gallery word, basicly in imageScreen of imageContainer"
+  },
+  "errorHappenedWhileSavingTheImage": "An error happened while saving the image to the gallery.",
+  "@errorHappenedWhileSavingTheImage": {
+    "description": "the error if Trying To save to gallery did not complete"
+  },
+  "attention": "Attention",
+  "@attention": {
+    "description": "the Attention word"
+  },
+  "doYouWantToExit": "Do you want to exit?",
+  "@doYouWantToExit": {
+    "description": "the response if you pressed the system navigation back button ON the scope of homeScreen"
+  },
+  "exit": " Exit ",
+  "@exit": {
+    "description": "the Exit word"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "the Cancel word"
+  },
+  "copyCode": "Copy code",
+  "@copyCode": {
+    "description": "the Copy code word, for code container"
+  },
+  "copid": "Copid!",
+  "@copid": {
+    "description": "the Copid! word"
+  },
+  "km": "km",
+  "@km": {
+    "description": "the km word"
+  },
+  "meter": "meter",
+  "@meter": {
+    "description": "the meter word"
+  },
+  "linkIsNotvalid": "Link is Not valid",
+  "@linkIsNotvalid": {
+    "description": "the response if `web link` is not valid"
+  },
+  "youAreCurrentlyOffline": "You are currently offline",
+  "@youAreCurrentlyOffline": {
+    "description": "the response if no internet connections"
+  },
+  "linkDoesnotPointToImage": "Link doesn't point to an image",
+  "@linkDoesnotPointToImage": {
+    "description": "the response if the linke is valid but not resolve as an image"
+  },
+  "passwordMustBeAtLeastWithDetails": "Password must be at least 8 characters long, with at least 5 alphabet, 2 numbers, and 1 special character like ",
+  "@passwordMustBeAtLeastWithDetails": {
+    "description": "the response if `password formField in SignUp screen` is empty or less than 8 characters."
+  },
+  "fiveAlphabetCharacters": "5 alphabet characters",
+  "@fiveAlphabetCharacters": {
+    "description": "one of possible errors in `password formField in SignUp screen`"
+  },
+  "twoNumbers": "2 numbers",
+  "@twoNumbers": {
+    "description": "one of possible errors in `password formField in SignUp screen`"
+  },
+  "oneSpecialCharachtersLike": "1 special charachters like ",
+  "@oneSpecialCharachtersLike": {
+    "description": "one of possible errors in `password formField in SignUp screen`"
+  },
+  "passwordMustContainAtLeast": "Password must contain at least",
+  "@passwordMustContainAtLeast": {
+    "description": "one of possible errors in `password formField in SignUp screen`"
+  },
+  "comma": ", ",
+  "@comma": {
+    "description": "the comma seperator `,`"
+  },
+  "and": "And ",
+  "@and": {
+    "description": "the and word"
+  },
+  "today": "Today",
+  "@today": {
+    "description": "the Today word"
+  },
+  "yesterday": "Yesterday",
+  "@yesterday": {
+    "description": "the Yesterday word"
+  },
+  "at": "at",
+  "@at": {
+    "description": "the at word `for clocks` like **at 10:33 PM**"
+  },
+  "justNow": "just now",
+  "@justNow": {
+    "description": "the just now word"
+  },
+  "durationAgo": "{durationInString} ago",
+  "@durationAgo": {
+    "description": "used for duration ago like: `3 years ago`",
+    "placeholders": {
+      "durationInString": {
+        "type": "String",
+        "example": "3 years"
+      }
+    }
+  },
+  "durationFromNow": "{durationInString} from now",
+  "@durationFromNow": {
+    "description": "used for duration from now like: `3 years from now`",
+    "placeholders": {
+      "durationInString": {
+        "type": "String",
+        "example": "3 years"
+      }
+    }
+  },
+  "@_CORE_NOUNS_SINGULAR_PLURAL": {},
+  "second": "second",
+  "@second": {
+    "description": "the second word"
+  },
+  "twoSeconds": "2 seconds",
+  "@twoSeconds": {
+    "description": "the 2 seconds word"
+  },
+  "secondsBeteenThreeAndTen": "{numberOfSeconds} seconds",
+  "@secondsBeteenThreeAndTen": {
+    "description": "number of seconds between 3 and 10 like: 3, 5 or 10 seconds",
+    "placeholders": {
+      "numberOfSeconds": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "secondsMoreThanTen": "{numberOfSeconds} seconds",
+  "@secondsMoreThanTen": {
+    "description": "number of seconds more than 10 like: 11 seconds",
+    "placeholders": {
+      "numberOfSeconds": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "minute": "minute",
+  "@minute": {
+    "description": "the minute word"
+  },
+  "twoMinutes": "2 minutes",
+  "@twoMinutes": {
+    "description": "the 2 minutes word"
+  },
+  "minutesBeteenThreeAndTen": "{numberOfMinutes} minutes",
+  "@minutesBeteenThreeAndTen": {
+    "description": "number of minutes between 3 and 10 like: 3, 5 or 10 minutes",
+    "placeholders": {
+      "numberOfMinutes": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "minutesMoreThanTen": "{numberOfMinutes} minutes",
+  "@minutesMoreThanTen": {
+    "description": "number of minutes more than 10 like: 11 minutes",
+    "placeholders": {
+      "numberOfMinutes": {
+        "type": "int",
+        "example": "11"
+      }
+    }
+  },
+  "hour": "hour",
+  "@hour": {
+    "description": "the hour word"
+  },
+  "twoHours": "2 hours",
+  "@twoHours": {
+    "description": "the 2 hours word"
+  },
+  "hoursBeteenThreeAndTen": "{numberOfHours} hours",
+  "@hoursBeteenThreeAndTen": {
+    "description": "number of hours between 3 and 10 like: 3, 5 or 10 hours",
+    "placeholders": {
+      "numberOfHours": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "hoursMoreThanTen": "{numberOfHours} hours",
+  "@hoursMoreThanTen": {
+    "description": "number of hours more than 10 like: 11 hours",
+    "placeholders": {
+      "numberOfHours": {
+        "type": "int",
+        "example": "11"
+      }
+    }
+  },
+  "day": "day",
+  "@day": {
+    "description": "the day word"
+  },
+  "twoDays": "2 days",
+  "@twoDays": {
+    "description": "the 2 days word"
+  },
+  "daysBeteenThreeAndTen": "{numberOfDays} days",
+  "@daysBeteenThreeAndTen": {
+    "description": "number of days between 3 and 10 like: 3, 5 or 10 days",
+    "placeholders": {
+      "numberOfDays": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "daysMoreThanTen": "{numberOfDays} days",
+  "@daysMoreThanTen": {
+    "description": "number of days more than 10 like: 11 days",
+    "placeholders": {
+      "numberOfDays": {
+        "type": "int",
+        "example": "11"
+      }
+    }
+  },
+  "week": "week",
+  "@week": {
+    "description": "the week word"
+  },
+  "twoWeeks": "2 weeks",
+  "@twoWeeks": {
+    "description": "the 2 weeks word"
+  },
+  "weeksBeteenThreeAndTen": "{numberOfWeeks} weeks",
+  "@weeksBeteenThreeAndTen": {
+    "description": "number of weeks between 3 and 10 like: 3, 5 or 10 weeks",
+    "placeholders": {
+      "numberOfWeeks": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "weeksMoreThanTen": "{numberOfWeeks} weeks",
+  "@weeksMoreThanTen": {
+    "description": "number of weeks more than 10 like: 11 weeks",
+    "placeholders": {
+      "numberOfWeeks": {
+        "type": "int",
+        "example": "11"
+      }
+    }
+  },
+  "month": "month",
+  "@month": {
+    "description": "the month word"
+  },
+  "twoMonths": "2 months",
+  "@twoMonths": {
+    "description": "the 2 months word"
+  },
+  "monthsBeteenThreeAndTen": "{numberOfMonths} months",
+  "@monthsBeteenThreeAndTen": {
+    "description": "number of months between 3 and 10 like: 3, 5 or 10 months",
+    "placeholders": {
+      "numberOfMonths": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "monthsMoreThanTen": "{numberOfMonths} months",
+  "@monthsMoreThanTen": {
+    "description": "number of months more than 10 like: 11 months",
+    "placeholders": {
+      "numberOfMonths": {
+        "type": "int",
+        "example": "11"
+      }
+    }
+  },
+  "year": "year",
+  "@year": {
+    "description": "the year word"
+  },
+  "twoYears": "2 years",
+  "@twoYears": {
+    "description": "the 2 years word"
+  },
+  "yearsBeteenThreeAndTen": "{numberOfYears} years",
+  "@yearsBeteenThreeAndTen": {
+    "description": "number of years between 3 and 10 like: 3, 5 or 10 years",
+    "placeholders": {
+      "numberOfYears": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "yearsMoreThanTen": "{numberOfYears} years",
+  "@yearsMoreThanTen": {
+    "description": "number of years more than 10 like: 11 years",
+    "placeholders": {
+      "numberOfYears": {
+        "type": "int",
+        "example": "11"
+      }
+    }
+  },
+  "decade": "decade",
+  "@decade": {
+    "description": "the decade word"
+  },
+  "twoDecades": "2 decades",
+  "@twoDecades": {
+    "description": "the 2 decades word"
+  },
+  "decadesBeteenThreeAndTen": "{numberOfDecades} decades",
+  "@decadesBeteenThreeAndTen": {
+    "description": "number of decades between 3 and 10 like: 3, 5 or 10 decades",
+    "placeholders": {
+      "numberOfDecades": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+  "decadesMoreThanTen": "{numberOfDecades} decades",
+  "@decadesMoreThanTen": {
+    "description": "number of decades more than 10 like: 11 decades",
+    "placeholders": {
+      "numberOfDecades": {
+        "type": "int",
+        "example": "11"
+      }
+    }
+  },
+
+
+  
+  "@_MENUE_SCREEN": {},
+  "home": "Home",
+  "@home": {
+    "description": "the home button of menue screen"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "the profile button of menue screen"
+  },
+  "mealsSettings": "Meals Settings",
+  "@mealsSettings": {
+    "description": "title in `_SETTINGS_SCREENS`"
+  },
+  "generalSettings": "General Settings",
+  "@generalSettings": {
+    "description": "title in `_SETTINGS_SCREENS`"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "title of settings screen"
+  },
+  "shareTheApp": "Share",
+  "@shareTheApp": {
+    "description": "the Share The App word"
+  },
+  "shareTheAppText":  "           AI MealMingle App\nDownload from the Play Store\n\nhttps://play.google.com/store/apps/details?id=com.salahalshafey.aimealmingle",
+  "@shareTheAppText": {
+    "description": "share text of share the app button in menue screen"
+  },
+  "about": "About",
+  "@about": {
+    "description": "the about button of menue screen"
+  },
+  "logout": "Log out",
+  "@logout": {
+    "description": "the log out button of menue screen"
+  },
+  "signIn": "Sign In",
+  "@signIn": {
+    "description": "the Sign In button of menue screen 'guest view'"
+  },
+  
+
+
+  "@_SETTINGS_SCREENS": {},
+  "adjustYourMealsSelection": "Adjust your Meals Selection",
+  "@adjustYourMealsSelection": {
+    "description": "the tilte of `meals settings screen`"
+  },
+  "glutenfree": "Gluten-Free",
+  "@glutenfree": {
+    "description": "one setting of `meals settings screen`"
+  },
+  "lactosefree": "Lactose-Free",
+  "@lactosefree": {
+    "description": "one setting of `meals settings screen`"
+  },
+  "vegetarian": "Vegetarian",
+  "@vegetarian": {
+    "description": "one setting of `meals settings screen`"
+  },
+  "vegan": "Vegan",
+  "@vegan": {
+    "description": "one setting of `meals settings screen`"
+  },
+  "displayMealTypeMeals": "Display {mealType} Meals",
+  "@displayMealTypeMeals": {
+    "description": "Display {mealType} meals, like: Display Vegan Meals",
+    "placeholders": {
+      "mealType": {
+        "type": "String",
+        "example": "Vegan"
+      }
+    }
+  },
+  "displayArabicLanguage": "Display Arabic Language",
+  "@displayArabicLanguage": {
+    "description": "subtitle of Language in `_SETTINGS_SCREENS`"
+  },
+  "displayDarkTheme": "Display Dark Theme",
+  "@displayDarkTheme": {
+    "description": "subtitle of ThemeMode in `_SETTINGS_SCREENS`"
+  },
+  "color": "Color",
+  "@color": {
+    "description": "the color word"
+  },
+  "resetToDefault": "Reset to default",
+  "@resetToDefault": {
+  "description": "the reset to default tooltip in `_SETTINGS_SCREEN`"
+  },
+  "theme": "Theme",
+  "@theme": {
+  "description": "theme text of settings screen"
+  },
+  "themeMode": "Theme Mode",
+  "@themeMode": {
+  "description": "theme mode text of settings screen"
+  },
+  "systemDefault": "System default",
+  "@systemDefault": {
+    "description": "System default of theme"
+  },
+  "light": "Light",
+  "@light": {
+    "description": "Light mode of theme"
+  },
+  "dark": "Dark",
+  "@dark": {
+    "description": "Dark mode of theme"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "the language word"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "the notifications word"
+  },
+  "changeLanguage": "Change Language",
+  "@changeLanguage": {
+    "description": "tooltip Change to Language of sign in screen"
+  },
+  "changeToLightMode": "Change to Light Mode",
+  "@changeToLightMode": {
+    "description": "tooltip Change to Light Mode of ToggleThemeButton"
+  },
+  "changeToDarkMode": "Change to Dark Mode",
+  "@changeToDarkMode": {
+    "description": "tooltip Change to Dark Mode of ToggleThemeButton"
+  },
+ 
+  "defaultWord": "default",
+  "@defaultWord": {
+    "description": "the default word"
+  },
+  "allLanguages": "All Languages",
+  "@allLanguages": {
+    "description": "the All Languages word"
+  },
+
+  
+
+
+  "@_HOME_SCREEN": {},
+  "hijri": "Hijri",
+  "@hijri": {
+    "description": "the hijri word"
+  },
+  "ageCalculator": "Age Calculator",
+  "@ageCalculator": {
+    "description": "Title of the Home Screen"
+  },
+  "totalAge": "TOTAL AGE",
+  "@totalAge": {
+    "description": "Label for total age display"
+  },
+  "nextBirthday": "NEXT BIRTHDAY",
+  "@nextBirthday": {
+    "description": "Label for next birthday display"
+  },
+  "dateOfBirth": "DATE OF BIRTH",
+  "@dateOfBirth": {
+    "description": "Label for date of birth field"
+  },
+  "noDateChosen": "No Date Chosen",
+  "@noDateChosen": {
+    "description": "Placeholder text when no date is selected"
+  },
+  "pickADate": "Pick a Date",
+  "@pickADate": {
+    "description": "Tooltip for date picker icon"
+  },
+  "dayWhenYouBorn": "DAY WHEN YOU BORN",
+  "@dayWhenYouBorn": {
+    "description": "Label for the day you were born section"
+  },
+  "pauseNextBirthdayLive": "Pause Next Birthday Live",
+  "@pauseNextBirthdayLive": {
+    "description": "Tooltip for pausing the next birthday live countdown"
+  },
+  "playNextBirthdayLive": "Play Next Birthday Live",
+  "@playNextBirthdayLive": {
+    "description": "Tooltip for playing the next birthday live countdown"
+  },
+  
+
+
+
+  "@_ABOUT_SCREEN": {},
+  "appOverview": "App Overview",
+  "@appOverview": {
+    "description": "Title of the About App Screen"
+  },
+  "aboutAppDescription": "Welcome to My Age App our Age Calculator app, the ultimate tool to celebrate life's milestones and stay connected with your loved ones. Our app goes beyond just calculating your age – it brings a unique blend of functionality to make each birthday a cherished memory. Discover the day of the week you were born and explore the beauty of your Hijri birthdate. Never miss an important date again with our countdown timer to your next birthday, ensuring you're ready for another year of joy. But it doesn't stop there – you can save and manage the birthdates of your family and friends, and our thoughtful notification system will ensure you never forget to send your best wishes. celebrating life, capturing moments, and forging stronger bonds with those who matter.",
+  "@aboutAppDescription": {
+    "description": "Description text for the About App Screen"
+  },
+  "privacyPolicy": "Privacy Policy",
+  "@privacyPolicy": {
+    "description": "Text for the Privacy Policy button"
+  }
+}

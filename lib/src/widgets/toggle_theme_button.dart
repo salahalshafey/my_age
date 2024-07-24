@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_age/l10n/l10n.dart';
 
 class ToggleThemeButton extends StatelessWidget {
   const ToggleThemeButton({super.key, required this.setThemeMode});
@@ -19,8 +20,8 @@ class ToggleThemeButton extends StatelessWidget {
     return IconButton(
       onPressed: () => _toggleThemeMode(context),
       tooltip: brightness == Brightness.dark
-          ? "Change to Light Mode"
-          : "Change to Dark Mode",
+          ? Strings.of(context).changeToLightMode
+          : Strings.of(context).changeToDarkMode,
       icon: Icon(
         brightness == Brightness.dark
             ? Icons.light_mode //light_mode

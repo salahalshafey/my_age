@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_age/l10n/l10n.dart';
 import 'package:time/time.dart';
 
 class NextBirthDayLive extends StatefulWidget {
@@ -31,8 +32,8 @@ class _NextBirthDayLiveState extends State<NextBirthDayLive> {
       iconSize: 50,
       color: Theme.of(context).colorScheme.primary,
       tooltip: seeNextBirthDay
-          ? 'Pause Next BirthDay Live'
-          : 'Play Next BirthDay Live',
+          ? Strings.of(context).pauseNextBirthdayLive
+          : Strings.of(context).playNextBirthdayLive,
       /* child: Text(seeNextBirthDay
           ? 'STOP NEXT BIRTHDAY LIVE'
           : 'SEE NEXT BIRTHDAY LIVE'),*/
