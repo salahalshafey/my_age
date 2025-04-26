@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'providers/birthdate_provider.dart';
+import 'src/pages/home_screen.dart';
 
-import 'src/app.dart';
-import 'src/providers/general_settings_provider.dart';
+void main() {
+  runApp(MyApp());
+}
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  await Hive.initFlutter("My_Age");
-  await Hive.openBox("general_settings");
-
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (ctx) => GeneralSettings()),
-      ],
-      child: const MyApp(),
-    ),
-  );
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ChangeNotifierProvider(
+      create: (context) => BirthdateProvider(),
+      child: MaterialApp(
+        title: 'Birthdate Reminder',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomeScreen(),
+      ),
+    );
+  }
 }
