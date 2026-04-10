@@ -15,18 +15,15 @@ class DateView extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              color.withOpacity(0.1),
-              color.withOpacity(0.2),
-              color.withOpacity(0.3),
-              color.withOpacity(0.4),
+              color.withValues(alpha: 0.1),
+              color.withValues(alpha: 0.2),
+              color.withValues(alpha: 0.3),
+              color.withValues(alpha: 0.4),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          border: Border.all(
-            width: 0.5,
-            color: Colors.grey.shade400,
-          ),
+          border: Border.all(width: 0.5, color: Colors.grey.shade400),
           borderRadius: BorderRadius.circular(15),
         ),
         child: Column(
@@ -38,13 +35,7 @@ class DateView extends StatelessWidget {
                 style: const TextStyle(fontSize: 18),
               ),
             ),
-            SelectableText(
-              count,
-              style: TextStyle(
-                fontSize: 18,
-                color: color,
-              ),
-            ),
+            SelectableText(count, style: TextStyle(fontSize: 18, color: color)),
           ],
         ),
       ),
